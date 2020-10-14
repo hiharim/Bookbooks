@@ -10,6 +10,13 @@
 <!--        app:showAsAction="ifRoom">-->
 
 
+<!--        <item android:id="@+id/action_search"-->
+<!--                android:title="Search"-->
+<!--                android:icon="@android:drawable/ic_menu_search"-->
+<!--                app:showAsAction="always"-->
+<!--                app:actionViewClass="android.widget.SearchView"/>-->
+
+
         <item android:id="@+id/menu_online_book"
             app:showAsAction="never"
             android:title="온라인 책검색">

@@ -7,6 +7,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
 
 /**
   @SettingActivity
@@ -24,15 +25,20 @@ public class SettingActivity extends AppCompatActivity {
 
         context=this;
 
-        RbPreference pref=new RbPreference(this);
+        final RbPreference pref=new RbPreference(this);
 
         //로그아웃버튼
         Button logoutbtn=findViewById(R.id.activity_setting_logout_btn);
         logoutbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+            pref.clear(getApplicationContext());
 
+            Intent intent=new Intent(getApplicationContext(),LoginActivity.class);
+            intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP|Intent.FLAG_ACTIVITY_SINGLE_TOP);
 
+            startActivity(intent);
+            Toast.makeText(getApplicationContext(),"로그아웃되었습니다",Toast.LENGTH_SHORT).show();
 
             }
         });
@@ -83,16 +89,16 @@ public class SettingActivity extends AppCompatActivity {
             }
         });
 
-        //통계버튼
-        Button statbtn=(Button)findViewById(R.id.status_statistic);
-        statbtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent=new Intent(getApplicationContext(),StatisticActivity.class);
-                startActivity(intent);
-
-            }
-        });
+//        //통계버튼
+//        Button statbtn=(Button)findViewById(R.id.status_statistic);
+//        statbtn.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                Intent intent=new Intent(getApplicationContext(),StatisticActivity.class);
+//                startActivity(intent);
+//
+//            }
+//        });
 
         //메모버튼
 //        Button memobtn=(Button)findViewById(R.id.status_memo);

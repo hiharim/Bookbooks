@@ -26,9 +26,10 @@ import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Locale;
 
 //BookAdapter는 BookData객체 리스트에 있는 데이터를 ListView의 row 레이아웃으로 제공 할 수 있는 ArrayAdapter이다
-public class BookAdapter extends ArrayAdapter<BookData>  {
+public class BookAdapter extends ArrayAdapter<BookData> {
 
     Context myContext;
     LayoutInflater inflater;
@@ -45,6 +46,8 @@ public class BookAdapter extends ArrayAdapter<BookData>  {
     // Adapter에 추가된 데이터를 저장하기 위한 ArrayList (원본데이터)
     private ArrayList<BookData> list=new ArrayList<>();
 
+    ArrayList<BookData> arrayList;
+
     Filter filter;
     // 필터링된 결과 데이터를 저장하기 위한 ArrayList. 최초에는 전체 리스트 보유.
     private ArrayList<BookData> filteredList=list;
@@ -56,6 +59,10 @@ public class BookAdapter extends ArrayAdapter<BookData>  {
        // DataList=objects;
         list=objects;
         inflater=LayoutInflater.from(context);
+
+//        this.arrayList=new ArrayList<BookData>();
+//        this.arrayList.addAll(objects);
+
     }
 
 
@@ -273,6 +280,19 @@ public class BookAdapter extends ArrayAdapter<BookData>  {
     }
 
 
+//    public void filter(String chatText){
+//        chatText=chatText.toLowerCase(Locale.getDefault());
+//        list.clear();
+//        if(chatText.length()==0){
+//            list.addAll(arrayList);
+//        }else{
+//            for(BookData bookData : arrayList){
+//                if(bookData.getTitle().toLowerCase(Locale.getDefault()).contains(chatText)){
+//                    list.add(bookData);
+//                }
+//            }
+//        }
+//    }
 
 
 

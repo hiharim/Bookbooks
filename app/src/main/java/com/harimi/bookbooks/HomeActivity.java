@@ -17,6 +17,7 @@ import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.text.Editable;
 import android.text.InputFilter;
+import android.text.TextUtils;
 import android.text.TextWatcher;
 import android.util.Log;
 import android.util.SparseArray;
@@ -149,6 +150,7 @@ public class HomeActivity extends AppCompatActivity {
             bookList=loadFromStorage();
             int size=bookList.size();
             pref.put("totalBooks",size);
+
 
             Log.e("홈액티비티","RbPreference에 저장"+size);
             Log.e("홈액티비티 onCreate","불러온다"+bookList);
@@ -322,14 +324,15 @@ public class HomeActivity extends AppCompatActivity {
 
         /**StatusBar*/
         //통계버튼
-        Button statbtn = (Button) findViewById(R.id.status_statistic);
-        statbtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext(), StatisticActivity.class);
-                startActivity(intent);
-            }
-        });
+//        Button statbtn = (Button) findViewById(R.id.status_statistic);
+//        statbtn.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                Intent intent = new Intent(getApplicationContext(), StatisticActivity.class);
+//                startActivity(intent);
+//            }
+//        });
+
         //사전버튼
         Button memobtn = (Button) findViewById(R.id.status_dictionary);
         memobtn.setOnClickListener(new View.OnClickListener() {
@@ -565,6 +568,32 @@ public class HomeActivity extends AppCompatActivity {
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.menu, menu);
+
+
+
+//        MenuItem myActionMenuItem=menu.findItem(R.id.action_search);
+//        SearchView searchView=(SearchView)myActionMenuItem.getActionView();
+//        searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+//            @Override
+//            public boolean onQueryTextSubmit(String s) {
+//                return false;
+//            }
+//
+//            @Override
+//            public boolean onQueryTextChange(String s) {
+//
+//               if(TextUtils.isEmpty(s)) {
+//                   adapter.filter("");
+//                   listView.clearTextFilter();
+//               }else{
+//                   adapter.filter(s);
+//               }
+//                return true;
+//            }
+//        });
+
+
+
         return true;
 
     }
