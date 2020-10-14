@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".FindAccountActivity">
+
+
+<!--    <TextView-->
+<!--        android:id="@+id/activity_find_account_tv"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginLeft="8sp"-->
+<!--        android:layout_marginTop="8sp"-->
+<!--        android:text="계정찾기"-->
+<!--        android:textAlignment="viewStart"-->
+<!--        android:textSize="27sp"-->
+<!--        android:textStyle="bold" />-->
+
+    <TextView
+        android:id="@+id/activity_find_account_tv_des"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8sp"
+        android:layout_marginTop="15sp"
+        android:text="사용한 이름 및 이메일을 입력해 주세요."
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/activity_find_account_tv_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8sp"
+        android:layout_marginTop="30sp"
+        android:text="이름"
+        android:textSize="27sp" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/activity_find_account_et_name"
+        android:layout_width="397dp"
+        android:layout_height="44dp"
+        android:layout_marginLeft="8sp"
+        android:layout_marginRight="8sp"
+        android:background="@drawable/bold_bottom"
+        android:hint="이름을 입력해 주세요." />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/activity_account_et_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/activity_find_account_tv_email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8sp"
+        android:layout_marginTop="30sp"
+        android:text="이메일"
+        android:textSize="27sp" />
+
+    <EditText
+        android:id="@+id/activity_find_account_et_email"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:layout_marginLeft="8sp"
+        android:layout_marginTop="8sp"
+        android:background="@drawable/bold_bottom"
+        android:ems="10"
+        android:hint="이메일을 입력해 주세요."
+        android:inputType="textEmailAddress" />
+
+    <Button
+        android:id="@+id/activity_find_account_btn_find"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="계정 찾기"
+        android:layout_marginTop="20sp"
+        android:textAlignment="center"
+        android:textSize="20sp" />
+
+
+
+
+</LinearLayout>

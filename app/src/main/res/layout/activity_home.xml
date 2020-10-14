@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".HomeActivity">
+
+
+<!--    <LinearLayout-->
+<!--        android:id="@+id/activity_home_library"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_below="@+id/activity_home_sv"-->
+<!--        android:layout_marginTop="30dp"-->
+<!--        android:background="@drawable/bold_bottom"-->
+<!--        android:orientation="vertical">-->
+
+<!--        <ImageView-->
+<!--            android:id="@+id/bookexample"-->
+<!--            android:layout_width="70dp"-->
+<!--            android:layout_height="90dp"-->
+<!--            android:layout_weight="0"-->
+<!--            app:srcCompat="@drawable/exbook" />-->
+
+<!--    </LinearLayout>-->
+
+<!--    <SearchView-->
+<!--        android:id="@+id/activity_home_sv"-->
+<!--        android:layout_below="@id/activity_home_filter"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginLeft="10dp"-->
+<!--        android:layout_marginTop="7dp"-->
+<!--        android:layout_marginRight="10dp"-->
+<!--        android:background="@drawable/round_border" />-->
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="7dp"
+        android:id="@+id/activity_home_filter"/>
+
+    <ListView
+        android:id="@+id/list"
+        android:layout_width="match_parent"
+        android:layout_height="650dp"
+        android:layout_below="@id/activity_home_filter"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="8dp"
+        android:textFilterEnabled="true">
+
+    </ListView>
+
+    <LinearLayout
+        android:id="@+id/statusbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/status_home"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.25"
+            android:backgroundTint="#F3E997"
+            android:text="내 서재"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/status_dictionary"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.25"
+            android:text="사전"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/status_statistic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.25"
+            android:text="통계"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/status_setting"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.25"
+            android:text="설정"
+            android:textSize="18sp" />
+    </LinearLayout>
+
+</RelativeLayout>

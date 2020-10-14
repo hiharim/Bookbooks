@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ResultSearchActivity">
+
+
+    <LinearLayout
+        android:id="@+id/statusbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/status_home"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.25"
+            android:backgroundTint="#F3E997"
+            android:text="내 서재"
+            android:textSize="18sp" />
+
+<!--        <Button-->
+<!--            android:id="@+id/status_memo"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_weight="0.25"-->
+<!--            android:text="메모"-->
+<!--            android:textSize="18sp" />-->
+
+        <Button
+            android:id="@+id/status_statistic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.25"
+            android:text="통계"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/status_setting"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.25"
+            android:text="설정"
+            android:textSize="18sp" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/activity_result_search_close_btn"
+        android:layout_width="71dp"
+        android:layout_height="45dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="6dp"
+        android:text="닫기" />
+
+    <SearchView
+        android:id="@+id/activity_result_search_sv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_centerInParent="true"
+        android:background="@drawable/round_border"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="62dp" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="111dp"
+        android:layout_marginTop="120dp"
+        android:text="검색결과"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/activity_result_search_num_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="120dp"
+        android:text="640"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="120dp"
+        android:layout_marginEnd="171dp"
+        android:text="권"
+        android:textSize="20sp" />
+
+    <Button
+        android:id="@+id/activity_result_search_more_btn"
+        android:layout_width="236dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="141dp"
+        android:text="검색결과 더보기"
+        android:textSize="16sp" />
+
+    <Button
+        android:id="@+id/activity_result_search_self_btn"
+        android:layout_width="236dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="86dp"
+        android:text="직접 책 추가하기"
+        android:textSize="16sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="156dp"
+        android:background="@drawable/bold_bottom"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:id="@+id/activity_result_search_book_ib"
+            android:layout_width="79dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0"
+            android:adjustViewBounds="true"
+            android:scaleType="fitXY"
+            app:srcCompat="@drawable/exbook2" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/activity_result_search_title_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="살인자의 기억법(김영하 장편소설)"
+                android:textSize="20sp"
+
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/activity_result_search_writer_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="김영하"
+                android:layout_marginTop="5dp"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/activity_result_search_publisher_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="문학동네"
+                android:layout_marginTop="10dp"
+                android:textSize="16sp" />
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

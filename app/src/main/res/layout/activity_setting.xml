@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SettingActivity">
+
+<!--    <ImageView-->
+<!--        android:id="@+id/activity_setting_profile_iv"-->
+<!--        android:layout_width="120dp"-->
+<!--        android:layout_height="120dp"-->
+<!--        android:layout_marginTop="80dp"-->
+<!--        android:adjustViewBounds="true"-->
+<!--        android:scaleType="fitXY"-->
+<!--        android:background="@drawable/round_border"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintHorizontal_bias="0.498"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent"-->
+<!--        tools:srcCompat="@android:drawable/ic_menu_gallery" />-->
+
+<!--    <TextView-->
+<!--        android:id="@+id/activity_setting_profile_tv"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginTop="16dp"-->
+<!--        android:text="프로필"-->
+<!--        android:textSize="24sp"-->
+<!--        android:textStyle="bold"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintHorizontal_bias="0.046"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent" />-->
+
+    <LinearLayout
+        android:id="@+id/statusbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <Button
+            android:id="@+id/status_home"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.25"
+            android:text="내 서재"
+            android:textSize="18sp" />
+
+<!--        <Button-->
+<!--            android:id="@+id/status_memo"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_weight="0.25"-->
+<!--            android:text="메모"-->
+<!--            android:textSize="18sp" />-->
+
+        <Button
+            android:id="@+id/status_dictionary"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.25"
+            android:text="사전"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/status_statistic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.25"
+            android:text="통계"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/status_setting"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.25"
+            android:backgroundTint="#F3E997"
+            android:text="설정"
+            android:textSize="18sp" />
+    </LinearLayout>
+
+<!--    <TextView-->
+<!--        android:id="@+id/activity_setting_nickname_tv"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginTop="12dp"-->
+<!--        android:text="닉네임"-->
+<!--        android:textSize="24sp"-->
+<!--        android:textStyle="bold"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/activity_setting_profile_iv" />-->
+
+<!--    <Button-->
+<!--        android:id="@+id/activity_setting_editprofile_btn"-->
+<!--        android:layout_width="133dp"-->
+<!--        android:layout_height="46dp"-->
+<!--        android:text="프로필 수정"-->
+<!--        android:textSize="18sp"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintHorizontal_bias="0.057"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent" />-->
+
+    <Button
+        android:id="@+id/activity_setting_logout_btn"
+        android:layout_width="145dp"
+        android:layout_height="42dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="4dp"
+        android:text="로그아웃"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/activity_setting_stopwatch_btn"
+        android:layout_width="226dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="124dp"
+        android:layout_marginEnd="100dp"
+        android:text="스탑워치"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.913"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+<!--    <Button-->
+<!--        android:id="@+id/activity_setting_timer_btn"-->
+<!--        android:layout_width="226dp"-->
+<!--        android:layout_height="45dp"-->
+<!--        android:layout_marginStart="16dp"-->
+<!--        android:layout_marginTop="20dp"-->
+<!--        android:layout_marginEnd="100dp"-->
+<!--        android:text="타이머"-->
+<!--        android:textSize="18sp"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintHorizontal_bias="0.913"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/activity_setting_stopwatch_btn" />-->
+
+    <Button
+        android:id="@+id/activity_setting_music_btn"
+        android:layout_width="226dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="27dp"
+        android:layout_marginEnd="100dp"
+        android:text="음악 감상"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.913"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/activity_setting_stopwatch_btn" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

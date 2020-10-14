@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".StatisticActivity">
+
+    <LinearLayout
+        android:id="@+id/statusbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <Button
+            android:id="@+id/status_home"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.25"
+            android:text="내 서재"
+            android:textSize="18sp" />
+
+<!--        <Button-->
+<!--            android:id="@+id/status_memo"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_weight="0.25"-->
+<!--            android:text="메모"-->
+<!--            android:textSize="18sp" />-->
+
+        <Button
+            android:id="@+id/status_dictionary"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.25"
+            android:text="사전"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/status_statistic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.25"
+            android:backgroundTint="#F3E997"
+            android:text="통계"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/status_setting"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.25"
+            android:text="설정"
+            android:textSize="18sp" />
+    </LinearLayout>
+
+
+    <!--    <TextView-->
+<!--        android:id="@+id/textView11"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginStart="8dp"-->
+<!--        android:layout_marginEnd="8dp"-->
+<!--        android:text="2020 (4)"-->
+<!--        android:textSize="18sp"-->
+<!--        app:layout_constraintBottom_toTopOf="@+id/imageButton"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent" />-->
+
+<!--    <ImageButton-->
+<!--        android:id="@+id/imageButton"-->
+<!--        android:layout_width="89dp"-->
+<!--        android:layout_height="105dp"-->
+<!--        android:layout_marginStart="8dp"-->
+<!--        android:layout_marginBottom="108dp"-->
+<!--        android:adjustViewBounds="true"-->
+<!--        android:scaleType="fitXY"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:srcCompat="@drawable/exbook" />-->
+
+<!--    <TextView-->
+<!--        android:id="@+id/textView15"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginStart="8dp"-->
+<!--        android:layout_marginTop="20dp"-->
+<!--        android:layout_marginEnd="216dp"-->
+<!--        android:text="소년이 온다"-->
+<!--        android:textSize="18sp"-->
+<!--        android:textStyle="bold"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintHorizontal_bias="0.0"-->
+<!--        app:layout_constraintStart_toEndOf="@+id/imageButton"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/textView11" />-->
+
+<!--    <TextView-->
+<!--        android:id="@+id/textView16"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginTop="12dp"-->
+<!--        android:text="한강"-->
+<!--        android:textSize="16sp"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintHorizontal_bias="0.028"-->
+<!--        app:layout_constraintStart_toEndOf="@+id/imageButton"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/textView15" />-->
+
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="104dp"
+        android:layout_marginTop="8dp"
+        android:text="지금까지 총"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/activity_statistic_totalnum_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="4"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toStartOf="@+id/textView8"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/textView4"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="88dp"
+        android:text="권을 읽었습니다"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.github.mikephil.charting.charts.BarChart
+        android:id="@+id/chartYear"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="80dp"
+        android:layout_marginEnd="4dp"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/activity_statistic_totalnum_tv" />
+
+    <TextView
+        android:id="@+id/activity_statistic_tv_year"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="2020"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/activity_statistic_totalnum_tv" />
+
+    <ImageButton
+        android:id="@+id/activity_statistic_after_btn"
+        android:layout_width="46dp"
+        android:layout_height="43dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="68dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView8"
+        app:srcCompat="@drawable/ic_baseline_keyboard_arrow_right_24" />
+
+    <ImageButton
+        android:id="@+id/activity_statistic_before_btn"
+        android:layout_width="46dp"
+        android:layout_height="43dp"
+        android:layout_marginStart="58dp"
+        android:layout_marginTop="56dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_baseline_keyboard_arrow_left_24" />
+
+    <!--    <com.github.mikephil.charting.charts.BarChart-->
+<!--        android:id="@+id/chartMonth"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="205dp"-->
+<!--        android:layout_marginBottom="20dp"-->
+<!--        android:background="@drawable/bold_bottom"-->
+<!--        app:layout_constraintBottom_toTopOf="@+id/statusbar"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintHorizontal_bias="0.0"-->
+<!--        app:layout_constraintStart_toStartOf="parent" />-->
+
+</androidx.constraintlayout.widget.ConstraintLayout>

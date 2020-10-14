@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DetailLibraryActivity">
+
+    <LinearLayout
+        android:id="@+id/statusbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <Button
+            android:id="@+id/status_home"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.25"
+            android:backgroundTint="#F3E997"
+            android:text="내 서재"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/status_memo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.25"
+            android:text="메모"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/status_statistic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.25"
+            android:text="통계"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/status_setting"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.25"
+            android:text="설정"
+            android:textSize="18sp" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/activity_detail_library_modify_btn"
+        android:layout_width="71dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="12dp"
+        android:text="수정"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/activity_detail_library_book_btn"
+        android:layout_width="86dp"
+        android:layout_height="109dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="80dp"
+        android:adjustViewBounds="true"
+        android:scaleType="fitXY"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/demi2" />
+
+    <ImageButton
+        android:id="@+id/imageButton6"
+        android:layout_width="86dp"
+        android:layout_height="109dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="80dp"
+        android:adjustViewBounds="true"
+        android:scaleType="fitXY"
+        app:layout_constraintStart_toEndOf="@+id/activity_detail_library_book_btn"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/demian" />
+
+    <ImageButton
+        android:id="@+id/imageButton7"
+        android:layout_width="86dp"
+        android:layout_height="109dp"
+        android:layout_marginTop="16dp"
+        android:adjustViewBounds="true"
+        android:scaleType="fitXY"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.478"
+        app:layout_constraintStart_toEndOf="@+id/imageButton8"
+        app:layout_constraintTop_toBottomOf="@+id/activity_detail_library_modify_btn"
+        app:srcCompat="@drawable/exbook" />
+
+    <ImageButton
+        android:id="@+id/imageButton8"
+        android:layout_width="86dp"
+        android:layout_height="109dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="80dp"
+        android:adjustViewBounds="true"
+        android:scaleType="fitXY"
+        app:layout_constraintStart_toEndOf="@+id/imageButton6"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/exbook2" />
+</androidx.constraintlayout.widget.ConstraintLayout>

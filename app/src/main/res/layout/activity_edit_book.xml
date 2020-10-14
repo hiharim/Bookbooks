@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".EditBookActivity">
+
+    <Button
+        android:id="@+id/activity_edit_book_finish_btn"
+        android:layout_width="71dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="4dp"
+        android:text="완료"
+        android:textColor="#209125"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <Button
+        android:id="@+id/activity_edit_book_cancel_btn"
+        android:layout_width="71dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="4dp"
+        android:text="취소"
+        android:textColor="#209125"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/activity_edit_book_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="책 정보 수정"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/activity_edit_book_finish_btn"
+        app:layout_constraintStart_toEndOf="@+id/activity_edit_book_cancel_btn"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <EditText
+        android:id="@+id/activity_edit_book_title_et"
+        android:layout_width="408dp"
+        android:layout_height="41dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/bold_bottom"
+        android:hint="제목"
+        android:textSize="21sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/activity_edit_book_plus_iv">
+
+    </EditText>
+
+    <ImageView
+        android:id="@+id/activity_edit_book_plus_iv"
+        android:layout_width="118dp"
+        android:layout_height="149dp"
+        android:layout_marginTop="24dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.027"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/activity_edit_book_cancel_btn"
+        app:srcCompat="@android:drawable/ic_input_add" />
+
+    <TextView
+        android:id="@+id/activity_edit_book_writer_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:text="저자"
+        android:textSize="19sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/activity_edit_book_publisher_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:text="출판사"
+        android:textSize="19sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/activity_edit_book_writer_tv" />
+
+    <TextView
+        android:id="@+id/activity_edit_book_start_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:text="독서 날짜"
+        android:textSize="19sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/activity_edit_book_publisher_tv" />
+
+    <TextView
+        android:id="@+id/activity_edit_book_mystar_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:text="내 별점"
+        android:textSize="19sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/activity_edit_book_start_tv" />
+
+
+    <RatingBar
+        android:id="@+id/activity_edit_book_ratingbar"
+        style="@style/Widget.AppCompat.RatingBar.Indicator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="4dp"
+        android:isIndicator="false"
+        android:max="5"
+        android:numStars="5"
+        android:stepSize="0.5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/activity_edit_book_mystar_tv"
+        app:layout_constraintTop_toBottomOf="@+id/activity_edit_book_start_et" />
+
+    <EditText
+        android:id="@+id/activity_edit_book_writer_et"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="4dp"
+        android:hint="저자를 입력하세요"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.499">
+
+    </EditText>
+
+    <EditText
+        android:id="@+id/activity_edit_book_publisher_et"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:layout_marginEnd="4dp"
+        android:hint="출판사를 입력하세요"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/activity_edit_book_publisher_tv"
+        app:layout_constraintTop_toBottomOf="@+id/activity_edit_book_writer_et">
+
+    </EditText>
+
+    <EditText
+        android:id="@+id/activity_edit_book_start_et"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:layout_marginEnd="4dp"
+        android:hint="없음"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/activity_edit_book_publisher_et" />
+
+    <TextView
+        android:id="@+id/activity_edit_book_rating_tv"
+        android:layout_width="182dp"
+        android:layout_height="37dp"
+        android:layout_marginStart="148dp"
+        android:layout_marginTop="48dp"
+        app:layout_constraintBottom_toBottomOf="@+id/activity_edit_book_ratingbar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/activity_edit_book_mystar_tv"
+        app:layout_constraintTop_toBottomOf="@+id/activity_edit_book_publisher_et" />
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

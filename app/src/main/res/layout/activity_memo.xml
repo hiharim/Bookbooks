@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MemoActivity">
+
+
+    <LinearLayout
+        android:id="@+id/statusbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/status_home"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.25"
+            android:text="내 서재"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/status_memo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.25"
+            android:backgroundTint="#F3E997"
+            android:text="메모"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/status_statistic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.25"
+            android:text="통계"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/status_setting"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.25"
+            android:text="설정"
+            android:textSize="18sp" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/activity_memo_memo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:text="메모"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="484dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_centerInParent="true"
+        android:layout_marginStart="2dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="0dp"
+        android:layout_marginBottom="91dp"
+        android:background="@drawable/round_border"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/activity_memo_book_iv"
+                android:layout_width="53dp"
+                android:layout_height="43dp"
+                android:layout_weight="0"
+                app:srcCompat="@drawable/exbook" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/activity_memo_title_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="소년이 온다"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/activity_memo_writer_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="한강"
+                    android:textSize="16sp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/activity_memo_date_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="2020.8.25 15:31" />
+
+        <TextView
+            android:id="@+id/activity_memo_page_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="20페이지"
+            android:textSize="16sp" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="75dp">
+
+            <ImageView
+                android:id="@+id/activity_memo_puote_iv"
+                android:layout_width="27dp"
+                android:layout_height="26dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="0dp"
+                app:srcCompat="@drawable/quote" />
+
+            <TextView
+                android:id="@+id/activity_memo_line_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/activity_memo_puote_iv"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="9dp"
+                android:layout_marginTop="26dp"
+                android:text="인용문이다"
+                android:textSize="18sp" />
+
+            <ImageView
+                android:id="@+id/activity_memo_quote_iv"
+                android:layout_width="27dp"
+                android:layout_height="26dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="366dp"
+                android:layout_marginTop="48dp"
+                app:srcCompat="@drawable/quote2" />
+
+
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/activity_memo_picture_iv"
+            android:layout_width="287dp"
+            android:layout_height="283dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="55dp"
+            android:scaleType="fitXY"/>
+            //app:srcCompat="@drawable/examplememo" />
+
+        <TextView
+            android:id="@+id/activity_memo_content_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="여기가 메모내용쓰는곳이다"
+            android:textSize="18sp" />
+
+    </LinearLayout>
+
+</RelativeLayout>
